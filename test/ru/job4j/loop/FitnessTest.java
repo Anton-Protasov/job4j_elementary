@@ -20,4 +20,9 @@ public class FitnessTest {
     public void whenIvanLessByFewNik() {
         assertThat(Fitness.calc(50, 90), is(2));
     }
+
+    @Test
+    public void whenIvanEquelNik() {
+        assertThat(Fitness.calc(90, 90), is(1));
+    }
 }
