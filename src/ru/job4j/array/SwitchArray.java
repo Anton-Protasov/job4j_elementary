@@ -5,11 +5,22 @@ public class SwitchArray {
     /*
     Метод swapBorder - меняет местами нулевой элемент и последний элемент в массиве.
      */
-
     public static int[] swapBorder(int[] array) {
         int temp = array[0];
         array[0] = array[array.length - 1];
         array[array.length - 1] = temp;
+        return array;
+    }
+
+    /*
+Это метод будет менять местами произвольные элементы
+То есть значение ячеек source и dest нужно поменять местами.
+    */
+    public static int[] swap(int[] array, int source, int dest) {
+        int per = array[source];
+        array[source] = array[dest];
+        array[dest] = per;
+
         return array;
     }
 
