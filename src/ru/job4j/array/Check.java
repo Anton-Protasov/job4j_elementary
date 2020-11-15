@@ -13,9 +13,7 @@ public class Check {
     public static boolean mono(boolean[] data) {
         boolean result = true;
         for (boolean i : data) {
-            if (i == result) {
-                result = true;
-            } else {
+            if (i != result) {
                 result = false;
                 break;
             }
@@ -23,3 +21,4 @@ public class Check {
         return result;
     }
 }
+
