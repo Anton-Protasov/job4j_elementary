@@ -29,8 +29,6 @@ public class FindLoop {
                 if (data[i] == el) {
                     rst = i;
                     break;
-                } else {
-                    rst = -1;
                 }
             }
         return rst;
