@@ -13,7 +13,7 @@ public class Check {
     public static boolean mono(boolean[] data) {
         boolean result = true;
         for (boolean i : data) {
-            if (i != result) {
+            if (i != data[0]) {
                 result = false;
                 break;
             }
