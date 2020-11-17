@@ -1,6 +1,7 @@
 package ru.job4j.loop;
 
 /*
+5.7. Ипотека [#395157]
 В этом задании нужно посчитать количество лет, необходимых для погашения кредита.
 Кредитная сумма пересчитывается каждый год от остатка суммы, умноженной на процент.
 Например, вы взяли кредит на 100 рублей. За год вы зарабатываете 70 рублей. Вам дали кредит на 50% в год.
@@ -9,12 +10,11 @@ amount - сумма выданная по кредиту, salary - годово�
  */
 
 public class Mortgage {
-    public static int year(int amount, int salary, double percent) {
-        int year = 1;
-        double delta = ((amount + (amount * percent / 100)) - salary);
-        while (delta > 0) {
+    public static int year(double amount, double salary, double percent) {
+        int year = 0;
+        while (amount > 0) {
             year++;
-            delta = (delta + (delta * percent / 100)) - salary;
+            amount = (amount + (amount * percent / 100)) - salary;
         }
         return year;
     }
