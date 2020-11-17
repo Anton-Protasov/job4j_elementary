@@ -49,4 +49,15 @@ public class MatrixCheckTest {
         };
         assertThat(MatrixCheck.monoHorizontal(array, 3), is(false));
     }
+
+    @Test
+    public void whenHasMonoVertical() {
+        char[][] input = {
+                {' ', ' ', 'x'},
+                {' ', ' ', 'x'},
+                {' ', ' ', 'x'},
+        };
+        boolean result = MatrixCheck.monoVertical(input, 2);
+        assertThat(result, is(true));
+    }
 }
