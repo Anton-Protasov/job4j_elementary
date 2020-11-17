@@ -2,6 +2,7 @@ package ru.job4j;
 
 /*
 6.5.3. Сортировка выборкой. [#395073]
+Сортировка по возрастанию
 На первом этапе мы ищем минимальный элемент во всем массиве. Минимальный элемент - это 1.
 Меняем местами нулевой элемент и 2 элемент по индексу - это 1.
 Теперь повторяем процедуру поиска минимального элемента, но ищем уже не с 0 элемента, а с элемента с индексом 1.
@@ -20,7 +21,7 @@ public class SortSelected {
     public static int[] sort(int[] data) {
         for (int i = 0; i < data.length; i++) {
             int min = MinDiapason.findMin(data, i, data.length - 1);
-            int indexMin = FindLoop.indexOf(data, min);
+            int indexMin = FindLoop.indexOf(data, min, i, data.length - 1);
             int var = data[i];
             data[i] = data[indexMin];
             data[indexMin] = var;
