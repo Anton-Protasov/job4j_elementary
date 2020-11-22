@@ -14,6 +14,8 @@ import java.util.Arrays;
 цикл for - для прохода по монетам и while - для проверки равенства.
  */
 
+/* вариант 1
+
 public class Machine {
     //    private final int[] coins = {10, 5, 2, 1};      //1 - создаем коллекцию номиналов монет. Не понятно почему private final?
     int[] coins = new int[]{10, 5, 2, 1};
@@ -37,6 +39,36 @@ public class Machine {
         }
         return Arrays.copyOf(rsl, size);
     }
+
+    public static void main(String[] args) {
+        Machine machine = new Machine();
+        int[] array = machine.change(50, 16);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+}
+
+ */
+
+public class Machine {
+    //    private final int[] coins = {10, 5, 2, 1};
+    int[] coins = new int[]{10, 5, 2, 1};
+
+    public int[] change(int money, int price) {
+        int[] rsl = new int[100];
+
+        int size = 0;
+        int delta = money - price;
+        for (int j = 0; j < coins.length; j++) {
+            while ((delta - coins[j]) >= 0) {
+                rsl[size] = coins[j];
+                size += 1;
+                delta -= coins[j];
+                    }
+                }
+        return Arrays.copyOf(rsl, size);
+        }
 
     public static void main(String[] args) {
         Machine machine = new Machine();
