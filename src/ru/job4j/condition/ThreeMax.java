@@ -5,7 +5,6 @@ public class ThreeMax {
     /*
     Пример отладки программы с помощью debug (исправление ошибок в начальном коде)
      */
-
     public static int max(int first, int second, int third) {
         int result = third;
         if (first >= second && first >= third) {

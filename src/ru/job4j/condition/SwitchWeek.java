@@ -1,10 +1,11 @@
 package ru.job4j.condition;
-// 4.6.1. Switch [#395054]
+/*
+4.6.1. Switch [#395054]
+найти день недели в зависимости от его порядкового номер
+ */
 
 public class SwitchWeek {
-    /*
-    найти день недели в зависимости от его порядкового номер
-     */
+
     public String nameOfDay(int day) {
         String name;
         switch (day) {

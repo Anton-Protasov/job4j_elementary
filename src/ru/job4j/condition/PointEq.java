@@ -2,8 +2,9 @@ package ru.job4j.condition;
 
 public class PointEq {
 
-    // Метод eq проверяет, что две точки в системе координат одинаковы
-
+/*
+Метод eq проверяет, что две точки в системе координат одинаковы
+ */
     public static boolean eq(int x1, int y1, int x2, int y2) {
         return (x1 == x2) && (y1 == y2);
     }

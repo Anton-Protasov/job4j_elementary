@@ -1,4 +1,4 @@
-package ru.job4j.array.ru.job4j.array;
+package ru.job4j.array;
 
 /*
 6.2.3. Перевернуть массив. [#395082]

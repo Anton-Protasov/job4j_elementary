@@ -2,6 +2,8 @@ package ru.job4j.condition;
 
 public class Cinema {
 /*
+Альтернативный вариант реализации (менее оптимальный):
+
     public static void access(int age) {
         System.out.println("The age of the customer is : " + age);
         if (age >= 18) {
@@ -14,7 +16,6 @@ public class Cinema {
     public static void main(String[] args) {
         Cinema.access(21);
         Cinema.access(16);
-
     }
  */
 public static void permission(boolean allowByParent, boolean hasMoney) {

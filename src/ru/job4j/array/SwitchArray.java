@@ -20,7 +20,6 @@ public class SwitchArray {
         int per = array[source];
         array[source] = array[dest];
         array[dest] = per;
-
         return array;
     }
 

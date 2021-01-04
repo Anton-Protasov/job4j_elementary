@@ -10,19 +10,17 @@ public class Converter {
         return value / 60;
     }
 
-    public static void main(String[] args) {
-
-/*        int euro = Converter.rubleToEuro(140);
+    /*        int euro = Converter.rubleToEuro(140);
         int dollar = Converter.rubleToDollar(180);
         System.out.println("140 rubles are " + euro + " euro.");
         System.out.println("180 rubles are " + dollar + " dollars.");
  */
+    public static void main(String[] args) {
         int inEUR = 140;
         int expectedEUR = 2;
         int outEUR = Converter.rubleToEuro(inEUR);
         boolean testEUR = expectedEUR == outEUR;
         System.out.println("140 rub are 2 Euro. Test result: " + testEUR);
-
         int inUSD = 180;
         int expectedUSD = 2;
         int outUSD = Converter.rubleToDollar(inUSD);
